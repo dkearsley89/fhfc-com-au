@@ -1,0 +1,50 @@
+/*
+ * SITE WIDE SETTINGS
+ */
+body {
+	background: url("../pictures/stats_background.png");
+	margin: 0px;
+	font-family: Verdana;
+	font-size: 11px;
+}
+.grey {
+	color: #AFAFAF;
+}
+.centered {
+	text-align: center;
+}
+.statsTitle {
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+}
+.notes {
+	font-size: 8pt;
+}
+.mediumtext {
+	font-size: 8.5pt;
+}
+.mediumtextbold {
+	font-size: 8.5pt;
+	font-weight: bold;
+}
+.statsTD {
+	font-size: 8pt;
+	border: 1px inset #EFEFEF;
+	padding: 2px;
+	padding-left: 3px;
+}
+.statsGREYTD {
+	background-color: #e3e3e3;
+	font-size: 8pt;
+	color: #000000;
+	border: 1px inset #EFEFEF;
+	text-indent: 2px;
+	padding: 2px;
+}
+.statsTDSMALL {
+	font-size: 7pt;
+	border: 1px inset #EFEFEF;
+	text-indent: 2px;
+	padding: 2px;
+}

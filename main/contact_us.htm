@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.ddiv">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flagstaff Hill F.C</title>
+<link href="http://www.fhfc.com.au/pictures/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" media="screen" type="text/css" href="../css/fhfc.css" />
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDETDUbaqGGN6HpK6pFJes8eKRweNm7sP8&sensor=false">
+</script>
+<script type="text/javascript">
+function initialize() {
+//Declare Lat/Long coordinates
+  var myLatlng1 = new google.maps.LatLng(-35.052995, 138.595466); //FHFC 
+//Declare options for the map
+  var myOptions = {
+    center: myLatlng1,
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+//Create a new map and set which div to show it in, also pass in the options
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+//Setup info window content
+	var contentString = '<div style="color:black;"><h1>Flagstaff Hill F.C</h1>'+
+	'<p>Coromandel Street<br />'+
+	'Flagstaff Hill<br />'+
+	'5159, South Australia</p>'+	
+	'<p><b>Email:</b> <a href="mailto:fhfc@internode.on.net">fhfc@internode.on.net</a><br />'+
+	'<b>Phone:</b> (08) 8270 1432</p></div>'; 
+//Declare Info Window
+	var infowindow1 = new google.maps.InfoWindow({  
+	content: contentString,
+	maxWidth: 300,
+	maxHeight: 100
+	});
+//Declare a new marker
+    var marker1 = new google.maps.Marker({
+    position: myLatlng1,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title:"Flagstaff Hill F.C"
+	});
+//Add listener to the map (on click of the marker it will open the info window and attach to the marker)	
+	google.maps.event.addListener(marker1, 'click', function() { 
+	infowindow1.open(map,marker1); 
+	});
+}
+</script>
+</head>
+<body onload="initialize()">
+<div class="site-wrapper"> 
+  <!--#include file="../main/header.htm" -->
+  <div class="body-wrapper"> 
+    <!--#include file="../main/left_menu.htm" -->
+    <div class="content-wrapper">
+      <div class="panelBackgroundTop">
+        <div class="panel_title">Contact Us</div>
+      </div>
+      <div class="panel">
+        <div class="panel_content">
+          <div class="panel_content_half_width">
+            <a href="https://www.facebook.com/groups/261271068498/" class="alignright" target="_blank"><img class="facebookLogo" src="../pictures/facebook.png" border="0" /></a>
+            <p><span class="bold">Phone: </span>(08) 8270 1432</p>
+            <p><span class="bold">Mail: </span>PO Box 283<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flagstaff Hill, 5159</p>
+            <p><span class="bold">E-Mail: </span><a href="mailto:fhfc@internode.on.net">fhfc@internode.on.net</a></p>
+          </div>          
+          <div id="map_canvas" style="width:643px; height:450px"></div>
+        </div>
+      </div>
+      <div class="panelBackgroundBottom">&nbsp;</div>
+    </div>
+    <div class="rightMenu">
+      <div class="rightSubMenuTop"></div>
+      <div class="rightSubMenu">
+        <div class="rightSectionHeader">The Club Menu</div>
+        <ul>
+          <li><a href="../contacts/committee_contacts.htm">Committee &amp; Contacts</a></li>
+          <li><a href="../main/club_song.htm">Club Song</a></li>
+          <li><a href="../falconettes_falconians/falconettes_falconians.htm">Falconettes &amp; Falconians</a></li>
+          <li><a href="../documents/documents.htm">FHFC Documents</a></li>
+          <li><a href="javascript:popUpScrollbars('http://dkearsley-001-site1.etempurl.com/home.asp','1100','800')">FHFC Member Database</a></li>
+          <li><a href="../good_ideas/good_ideas_register.htm">Good Ideas Register</a></li>
+	  <li><a href="../main/contact_us.htm">Contact Us</a></li>
+  	  <li><a href="../main/about_us.htm">About Us</a></li>
+	  <li><a href="../main/faqs.htm">FAQ's</a></li>
+	  <li><a href="../main/function_centre.htm">Function Centre</a></li>
+        </ul>
+      </div>
+      <div class="rightSubMenuBottom"></div>
+      <!--#include file="../main/sponsors.htm" --> 
+    </div>
+  </div>
+  <!--#include file="../main/footer.htm" --> 
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    color: #d2d2d2;/*changed from grey #d2d2d2*/
+    font-family: Verdana;
+    font-size: 12px;/*changed from 11px*/
+}
+/* ~~ this fixed width container surrounds all other divs ~~ */
+.container {
+	width: 645px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	/*overflow: hidden; /* this declaration makes the .container understand where the floated columns within ends and contain them */
+	padding-bottom: 25px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#sponsorTable {
+	background:#0a0a32;	
+	width: 635px;
+	padding-right: 12px;
+	position:relative;
+}
+.sponsorLeft {
+	float: left;
+	padding-right: 10px;
+	width: 49%;
+	/*background:#FFf;*/
+	height: 100%;
+}
+.sponsorRight {
+	float: right;
+	width: 49%;
+	/*background:#fff;*/
+	height: 100%;
+}
+.sponsorMiddle {
+	float: right;
+	width: 98%;
+	/*background:#fff;*/
+	height: 100%;
+}
+ h2.BusCard {
+	text-align: center;
+	margin-bottom: 0px;
+
+
+}
+.rightMenuspon {
+	float: right;
+
+}
+
+
+ul {
+	text-align:center;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+li {
+	list-style: none;
+	list-style-position:inside;
+}
